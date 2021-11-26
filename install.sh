@@ -10,7 +10,7 @@ cp -a wordpress/* /var/www/html/
 chown apache.apache /var/www/html/*
 sed -i 's/DirectoryIndex index.html/DirectoryIndex index.php/g' /etc/httpd/conf/httpd.conf
 cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
-sed -i 's/database_name_here/mydb1/g' /var/www/html/wp-config.php
+sed -i 's/database_name_here/mydb/g' /var/www/html/wp-config.php
 sed -i 's/username_here/admin/g' /var/www/html/wp-config.php
 sed -i 's/password_here/aa845367/g' /var/www/html/wp-config.php
 #sed -i 's/localhost/mydb.cbnbkh3unm6b.ap-northeast-1.rds.amazonaws.com/g' /var/www/html/wp-config.php
