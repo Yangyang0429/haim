@@ -8,3 +8,7 @@ resource "aws_lb" "yangsh_alb" {
         "Name" = "yangsh-alb"
     }
 }
+
+output "dns_name" {
+  value       = aws_lb.yangsh_alb.dns_name
+}
