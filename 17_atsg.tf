@@ -12,6 +12,6 @@ resource "aws_autoscaling_group" "yangsh_atsg" {
     desired_capacity = 2
     force_delete = true
     launch_configuration = aws_launch_configuration.yangsh_lacf.name
-    placement_group = aws_placement_group.yangsh_pg.id
+    #placement_group = aws_placement_group.yangsh_pg.id
     vpc_zone_identifier = [aws_subnet.yangsh_puba.id, aws_subnet.yangsh_pubc.id]
 }
