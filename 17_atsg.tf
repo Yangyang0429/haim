@@ -4,11 +4,11 @@ resource "aws_placement_group" "yangsh_pg" {
 }
 
 resource "aws_autoscaling_group" "yangsh_atsg" {
-    name = "yangsh-pg"
+    name = "yangsh-atsg"
     min_size = 2
-    max_size = 8
-    health_check_grace_period = 300
-    health_check_type = "ELB"
+    max_size = 10
+    health_check_grace_period = 60
+    health_check_type = "EC2"
     desired_capacity = 2
     force_delete = true
     launch_configuration = aws_launch_configuration.yangsh_lacf.name
